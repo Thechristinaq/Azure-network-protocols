@@ -82,7 +82,7 @@ Step 4: Test Connectivity Between VMs
 Step 5: Alter Network Security Group Settings
 <br> - In the Azure Portal, type Network Security Group in the search bar (this is the VMs firewall)
 <br> - Select VM2-NSG and click on Inbound Security Rules, add, and in the new popup window, change protocol to ICMP, and change action to deny, notice how the ping in VM1 Powershell is immediately halted due to being blcoked by VM2's firewall. 
-<br> = To allow traffic again, simply follow the same steps within the Inbound Security Rule but to change action to allow, the perpetual ping will resume sucessfully as before 
+<br> - To allow traffic again, simply follow the same steps within the Inbound Security Rule but to change action to allow, the perpetual ping will resume sucessfully as before 
 <br> - Press Ctrl+C to stop ping within Powershell 
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/c790bfb6-a4fe-40d5-a7e6-1910ab15e612)
