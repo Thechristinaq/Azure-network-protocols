@@ -39,11 +39,9 @@ Step 1: Create Two Virtual Machines in Azure
 <br> - Make sure when you are creating these two VMs that they are in the same Resource Group
 <br> - When setting up your VMs, remember the username and password that you use, you will need this information to connect remotely into the VMs
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/a9a3ba98-8a3d-4525-9b96-912afdeafe8c)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/582317f7-0b1f-43b1-bbe5-8711124a01fa)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/63b12174-d9be-4d5f-9c30-d93d384a8961)
-
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/b744a959-c8d1-4c9f-a03f-2d92394612e4)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/2aa7231a-a68c-4f00-a79a-d7c546291149)
 
 
 Step 2: Remote Desktop into VMs
@@ -53,9 +51,7 @@ Step 2: Remote Desktop into VMs
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/a0b1267b-b229-4bff-ab21-954ffabed1ce)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/f87a70ba-a0b7-4086-b336-2f8252bd02b9)
-
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/f6c00f6d-4cb7-49fd-99e0-a9adf00ccb3c)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/5e5dbb2b-b2d3-49e5-97bb-6f5271f91f91)
 
 
 Step 3: Install and Run Wireshark
@@ -63,11 +59,11 @@ Step 3: Install and Run Wireshark
 <br> - Once downloaded, open Wireshark and double click Ethernet 2 
 <br> - Filter out the network traffic by typing "icmp" in the display filter bar 
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/dbd0e6e3-fa52-4094-aacb-eb8a93ec7f5c)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/c23f76e1-9647-4dba-82cb-7e7591d99619)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/c98fdcd5-0fbd-4fdc-aac4-58124743ade7)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/ab792b66-4687-4f43-9277-d562c0a9fdbd)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/5dc60bed-bde5-4c66-afac-bd9b0d4e9ccd)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/7af0fe3a-ee9b-4c25-bbd2-28d8146fb6a4)
 
 
 Step 4: Test Connectivity Between VMs
@@ -78,9 +74,10 @@ Step 4: Test Connectivity Between VMs
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/719ac2de-70c4-4fac-8691-fb9066abbe99)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/efcee531-4b97-4ad6-9a95-893314d8f00f)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/4f598ed9-a5f0-4180-a529-03692a56cca0)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/688aadc0-5653-4966-8bba-ada19dfc484d)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/333223a0-d17e-4d8c-af91-1f7c06a3eb0e)
+
 
 Step 5: Alter Network Security Group Settings
 <br> - In the Azure Portal, type Network Security Group in the search bar (this is the VMs firewall)
@@ -88,15 +85,27 @@ Step 5: Alter Network Security Group Settings
 <br> = To allow traffic again, simply follow the same steps within the Inbound Security Rule but to change action to allow, the perpetual ping will resume sucessfully as before 
 <br> - Press Ctrl+C to stop ping within Powershell 
 
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/c790bfb6-a4fe-40d5-a7e6-1910ab15e612)
 
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/5e3d51dc-173e-4ba8-ab2e-cbbcae31a5f4)
-
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/cc9f4ad7-1493-493a-863e-dfe5ab9d64c2)
-
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/02a9b8b7-1384-4571-ae35-cfd4f7b6cabd)
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/354b88d7-c007-40fd-8fe5-2ca55f2a155f)
 
 Step 6: SSH into VM
+<br> - In Wireshark. filter for SSH traffic only 
+<br> - SSH into VM2 from VM1 via Powershell, in Powershell type "ssh (username)@VM2 Private IP address, follow the prompts, type yes, and in the password section, the password will not show up as you type but it will still register, presss enter
+<br> - You will notice as you type into powershell, SSH traffic starts to roll in 
+<br> - You can type id and other commands into the prompt or you can exit this section by typing exit then enter 
+
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/83e27d14-6973-4918-b05f-77b9fe228dad)
+
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/53a1da94-8ef7-4348-b2f8-f408b1592f94)
+
+
 Step 7: Observe DHCP Traffic
+<br> - In Wireshark, Filter for DHCP traffic only
+<br> - In Powershell, type "ipconfig /renew into the command line to request a new IP address for VM1 (you may lose connection to the VM, if so, you can remote desktop back into it 
+<br> - You should be able to see the newly issued IP address in Wireshark
+
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/fe771e34-085a-4198-85ea-a7bf113f30d1)
 
 
 
