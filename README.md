@@ -99,11 +99,12 @@ Step 5: Alter Network Security Group Settings
 Step 6: SSH into VM
 - In Wireshark. filter for SSH traffic only 
 - SSH into VM2 from VM1 via Powershell, in Powershell type "ssh (username)@VM2 Private IP address, follow the prompts, type yes, and in the password section, the password will not show up as you type but it will still register, presss enter
-- You will notice as you type into powershell, SSH traffic starts to roll in 
-- You can type id and other commands into the prompt or you can exit this section by typing exit then enter 
+- You will notice as you type into powershell, SSH traffic starts to roll in  
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/83e27d14-6973-4918-b05f-77b9fe228dad)
 
+- You can type id and other commands into the prompt or you can exit this section by typing exit then enter
+  
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/53a1da94-8ef7-4348-b2f8-f408b1592f94)
 
 
