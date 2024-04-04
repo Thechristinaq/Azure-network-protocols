@@ -35,11 +35,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 Step 1: Create Two Virtual Machines in Azure
 - In the Microsoft Azure Portal, search "Resource groups" in the search bar and create a Resource group
+
+![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/582317f7-0b1f-43b1-bbe5-8711124a01fa)
+
 - Search "Virtual Machines" in the search bar and create two Virtual Machines with the following OS, Windows 10 22H2 OS for VM1, and Ubuntu 20.04 OS for VM2
 - Make sure when you are creating these two VMs that they are in the same Resource Group
 - When setting up your VMs, remember the username and password that you use, you will need this information to connect remotely into the VMs
-
-![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/582317f7-0b1f-43b1-bbe5-8711124a01fa)
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/2aa7231a-a68c-4f00-a79a-d7c546291149)
 
@@ -47,34 +48,39 @@ Step 1: Create Two Virtual Machines in Azure
 Step 2: Remote Desktop into VMs
 - After you have created your two Virtual Machines, you will use the Remote Desktop Connection application to connect into VM1
 - You can find this in the start menu search bar by typing "Remote Desktop Connection" 
-- You will need the Public IP address of VM1 and the username and password you created to access VM1
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/a0b1267b-b229-4bff-ab21-954ffabed1ce)
+
+- You will need the Public IP address of VM1 and the username and password you created to access VM1
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/5e5dbb2b-b2d3-49e5-97bb-6f5271f91f91)
 
 
 Step 3: Install and Run Wireshark
 - Once inside VM1, google Wireshark and download the application (Windows Installer 64 bit) from the official site
-- Once downloaded, open Wireshark and double click Ethernet 2 
-- Filter out the network traffic by typing "icmp" in the display filter bar 
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/c23f76e1-9647-4dba-82cb-7e7591d99619)
 
+- Once downloaded, open Wireshark and double click Ethernet 2 
+
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/ab792b66-4687-4f43-9277-d562c0a9fdbd)
+
+- Filter out the network traffic by typing "icmp" in the display filter bar 
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/7af0fe3a-ee9b-4c25-bbd2-28d8146fb6a4)
 
 
 Step 4: Test Connectivity Between VMs
 - In VM1, Search Powershell in the start menu search bar and open it 
-- In the Azure portal, go to VM2 and copy the private IP address 
-- In VM1 within Powershell, type "ping -t" with VM2's private IP address to start a perpetual ping 
-- Wireshark will now show the two VMs pinging back and forth showing the data being communicated between both the VMs 
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/719ac2de-70c4-4fac-8691-fb9066abbe99)
 
+In the Azure portal, go to VM2 and copy the private IP address 
+
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/4f598ed9-a5f0-4180-a529-03692a56cca0)
+
+- In VM1 within Powershell, type "ping -t" with VM2's private IP address to start a perpetual ping 
+- Wireshark will now show the two VMs pinging back and forth showing the data being communicated between both the VMs 
 
 ![image](https://github.com/thechristinaq/Azure-network-protocols/assets/165831241/333223a0-d17e-4d8c-af91-1f7c06a3eb0e)
 
